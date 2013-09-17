@@ -1,0 +1,497 @@
+
+*****************************************************
+*****************************************************
+*********  SUBMIT ORDER  XML TRACE  ********************
+*****************************************************
+*****************************************************
+
+
+ENDPOINT: https://connect.sandbox.mimeo.com/2012/02/orders/GetOrderRequest
+-----------------------------------
+<OrderRequest xmlns="http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <LineItems>
+    <AddLineItemRequest>
+      <Name />
+      <StoreItemReference>
+        <Id>00000000-0000-0000-0000-000000000001</Id>
+      </StoreItemReference>
+      <Quantity>1</Quantity>
+    </AddLineItemRequest>
+  </LineItems>
+  <Recipients>
+    <AddRecipientRequest>
+      <Address>
+        <FirstName />
+        <LastName />
+        <Street />
+        <City />
+        <StateOrProvince />
+        <Country />
+        <PostalCode />
+        <TelephoneNumber />
+        <IsResidential>false</IsResidential>
+      </Address>
+      <ShippingMethodId>00000000-0000-0000-0000-000000000001</ShippingMethodId>
+    </AddRecipientRequest>
+  </Recipients>
+  <SpecialInstructionCodes xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <a:string />
+  </SpecialInstructionCodes>
+  <PaymentMethod i:type="CreditCardPaymentMethod">
+    <NameOnCard />
+    <CreditCardType>Visa</CreditCardType>
+    <Number />
+    <BillingPostalCode />
+    <Street />
+    <City />
+    <StateOrProvince />
+    <CountryCode />
+    <ExpirationMonth>0</ExpirationMonth>
+    <ExpirationYear>0</ExpirationYear>
+  </PaymentMethod>
+</OrderRequest>
+-----------------------------------
+---------------------
+ Document Id: a4cfb527-8462-490f-a77a-44e45a53c9d8
+-----------------------------------
+METHOD: PopulateAddLineItems-----------------------------------
+<OrderRequest xmlns="http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <LineItems>
+    <AddLineItemRequest>
+      <Name>Test</Name>
+      <StoreItemReference>
+        <Id>a4cfb527-8462-490f-a77a-44e45a53c9d8</Id>
+      </StoreItemReference>
+      <Quantity>1</Quantity>
+    </AddLineItemRequest>
+  </LineItems>
+  <Recipients>
+    <AddRecipientRequest>
+      <Address>
+        <FirstName />
+        <LastName />
+        <Street />
+        <City />
+        <StateOrProvince />
+        <Country />
+        <PostalCode />
+        <TelephoneNumber />
+        <IsResidential>false</IsResidential>
+      </Address>
+      <ShippingMethodId>00000000-0000-0000-0000-000000000001</ShippingMethodId>
+    </AddRecipientRequest>
+  </Recipients>
+  <SpecialInstructionCodes xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <a:string />
+  </SpecialInstructionCodes>
+  <PaymentMethod i:type="CreditCardPaymentMethod">
+    <NameOnCard />
+    <CreditCardType>Visa</CreditCardType>
+    <Number />
+    <BillingPostalCode />
+    <Street />
+    <City />
+    <StateOrProvince />
+    <CountryCode />
+    <ExpirationMonth>0</ExpirationMonth>
+    <ExpirationYear>0</ExpirationYear>
+  </PaymentMethod>
+</OrderRequest>
+-----------------------------------
+-----------------------------------
+<OrderRequest xmlns="http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <LineItems>
+    <AddLineItemRequest>
+      <Name>Test</Name>
+      <StoreItemReference>
+        <Id>a4cfb527-8462-490f-a77a-44e45a53c9d8</Id>
+      </StoreItemReference>
+      <Quantity>1</Quantity>
+    </AddLineItemRequest>
+  </LineItems>
+  <Recipients>
+    <AddRecipientRequest>
+      <Address>
+        <FirstName>Will</FirstName>
+        <LastName>Smith</LastName>
+        <Street>460 Park Ave S.</Street>
+        <City>New York</City>
+        <StateOrProvince>NY</StateOrProvince>
+        <Country>US</Country>
+        <PostalCode>10016</PostalCode>
+        <TelephoneNumber>212-333-4444</TelephoneNumber>
+        <IsResidential>false</IsResidential>
+      </Address>
+      <ShippingMethodId>00000000-0000-0000-0000-000000000001</ShippingMethodId>
+    </AddRecipientRequest>
+    <AddRecipientRequest xmlns="">
+      <Address>
+        <FirstName>Raul</FirstName>
+        <LastName>Moncada</LastName>
+        <Street>10226 Signal Hill RD</Street>
+        <City>Austin</City>
+        <StateOrProvince>TX</StateOrProvince>
+        <Country>US</Country>
+        <PostalCode>78737</PostalCode>
+        <TelephoneNumber>212-333-4444</TelephoneNumber>
+        <IsResidential>true</IsResidential>
+      </Address>
+      <ShippingMethodId>00000000-0000-0000-0000-000000000001</ShippingMethodId>
+    </AddRecipientRequest>
+  </Recipients>
+  <SpecialInstructionCodes xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <a:string />
+  </SpecialInstructionCodes>
+  <PaymentMethod i:type="UserCreditLimitPaymentMethod">
+    <Id>524D8417-6E1D-466F-A0BE-627A4FA742DF</Id>
+  </PaymentMethod>
+</OrderRequest>
+-----------------------------------
+ENDPOINT: POST - https://connect.sandbox.mimeo.com/2012/02/orders/GetShippingOptions
+-----------------------------------
+<OrderAvailableDeliveryOptions xmlns="http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <AdditionalProcessingHoursAllowed>24</AdditionalProcessingHoursAllowed>
+  <ShipDate>2012-11-03T04:59:59Z</ShipDate>
+  <AvailableDeliveryOptionsPerRecipient>
+    <RecipientAvailableDeliveryOptions>
+      <RecipientId>d825659a-60c4-4f78-9697-1525e23d8ade</RecipientId>
+      <RecipientReferenceData />
+      <DeliveryOptionQuotes>
+        <DeliveryOptionQuote>
+          <ShippingMethodDetail>
+            <Id>f2dc9f3d-ba8a-4a0c-831f-e240db9726db</Id>
+            <Name>Ground</Name>
+          </ShippingMethodDetail>
+          <DeliveryCommitmentDate>2012-11-09T23:59:00</DeliveryCommitmentDate>
+          <DeliveryCharge>8.476482347386172006745362563</DeliveryCharge>
+        </DeliveryOptionQuote>
+        <DeliveryOptionQuote>
+          <ShippingMethodDetail>
+            <Id>8c09e5e7-b27d-4451-8278-00c7a6923004</Id>
+            <Name>1 to 3 Days</Name>
+          </ShippingMethodDetail>
+          <DeliveryCommitmentDate>2012-11-07T16:30:00</DeliveryCommitmentDate>
+          <DeliveryCharge>11.144701056338028169014084507</DeliveryCharge>
+        </DeliveryOptionQuote>
+        <DeliveryOptionQuote>
+          <ShippingMethodDetail>
+            <Id>a5dbddce-7f92-4d45-bbfc-3111b47e79ce</Id>
+            <Name>Two Day Guaranteed</Name>
+          </ShippingMethodDetail>
+          <DeliveryCommitmentDate>2012-11-06T16:30:00</DeliveryCommitmentDate>
+          <DeliveryCharge>15.406626019108280254777070064</DeliveryCharge>
+        </DeliveryOptionQuote>
+        <DeliveryOptionQuote>
+          <ShippingMethodDetail>
+            <Id>88ce7825-bdf5-43f4-9064-d5d9dadca0f0</Id>
+            <Name>Early Morning Next Day</Name>
+          </ShippingMethodDetail>
+          <DeliveryCommitmentDate>2012-11-05T08:00:00</DeliveryCommitmentDate>
+          <DeliveryCharge>87.902925</DeliveryCharge>
+        </DeliveryOptionQuote>
+        <DeliveryOptionQuote>
+          <ShippingMethodDetail>
+            <Id>f17e9623-7446-4d20-a1b3-290746356cf5</Id>
+            <Name>Next Day Guaranteed</Name>
+          </ShippingMethodDetail>
+          <DeliveryCommitmentDate>2012-11-05T15:00:00</DeliveryCommitmentDate>
+          <DeliveryCharge>26.991956500392772977219167321</DeliveryCharge>
+        </DeliveryOptionQuote>
+        <DeliveryOptionQuote>
+          <ShippingMethodDetail>
+            <Id>fb8abb21-5829-486b-84ce-63d061f21856</Id>
+            <Name>Priority Next Day (Saturday)</Name>
+          </ShippingMethodDetail>
+          <DeliveryCommitmentDate>2012-11-03T12:00:00</DeliveryCommitmentDate>
+          <DeliveryCharge>62.488544445964432284541723666</DeliveryCharge>
+        </DeliveryOptionQuote>
+        <DeliveryOptionQuote>
+          <ShippingMethodDetail>
+            <Id>2a09f181-8f6a-4979-a6f8-edaba6406146</Id>
+            <Name>Priority Next Day</Name>
+          </ShippingMethodDetail>
+          <DeliveryCommitmentDate>2012-11-05T10:30:00</DeliveryCommitmentDate>
+          <DeliveryCharge>32.943397518427518427518427519</DeliveryCharge>
+        </DeliveryOptionQuote>
+      </DeliveryOptionQuotes>
+    </RecipientAvailableDeliveryOptions>
+  </AvailableDeliveryOptionsPerRecipient>
+</OrderAvailableDeliveryOptions>
+-----------------------------------
+-----------------------------------
+<OrderRequest xmlns="http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <LineItems>
+    <AddLineItemRequest>
+      <Name>Test</Name>
+      <StoreItemReference>
+        <Id>a4cfb527-8462-490f-a77a-44e45a53c9d8</Id>
+      </StoreItemReference>
+      <Quantity>1</Quantity>
+    </AddLineItemRequest>
+  </LineItems>
+  <Recipients>
+    <AddRecipientRequest>
+      <Address>
+        <FirstName>Will</FirstName>
+        <LastName>Smith</LastName>
+        <Street>460 Park Ave S.</Street>
+        <City>New York</City>
+        <StateOrProvince>NY</StateOrProvince>
+        <Country>US</Country>
+        <PostalCode>10016</PostalCode>
+        <TelephoneNumber>212-333-4444</TelephoneNumber>
+        <IsResidential>false</IsResidential>
+      </Address>
+      <ShippingMethodId>f2dc9f3d-ba8a-4a0c-831f-e240db9726db</ShippingMethodId>
+    </AddRecipientRequest>
+    <AddRecipientRequest xmlns="">
+      <Address>
+        <FirstName>Raul</FirstName>
+        <LastName>Moncada</LastName>
+        <Street>10226 Signal Hill RD</Street>
+        <City>Austin</City>
+        <StateOrProvince>TX</StateOrProvince>
+        <Country>US</Country>
+        <PostalCode>78737</PostalCode>
+        <TelephoneNumber>212-333-4444</TelephoneNumber>
+        <IsResidential>true</IsResidential>
+      </Address>
+      <ShippingMethodId>a5dbddce-7f92-4d45-bbfc-3111b47e79ce</ShippingMethodId>
+    </AddRecipientRequest>
+  </Recipients>
+  <SpecialInstructionCodes xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <a:string />
+  </SpecialInstructionCodes>
+  <PaymentMethod i:type="UserCreditLimitPaymentMethod">
+    <Id>524D8417-6E1D-466F-A0BE-627A4FA742DF</Id>
+  </PaymentMethod>
+  <Options>
+    <AdditionalProcessingHours>24</AdditionalProcessingHours>
+  </Options>
+  <PackagingSlip>
+    <SalutationType>None</SalutationType>
+    <Memo>Professor Smith</Memo>
+  </PackagingSlip>
+</OrderRequest>
+-----------------------------------
+ENDPOINT: POST - https://connect.sandbox.mimeo.com/2012/02/orders/GetQuote
+-----------------------------------
+<OrderQuote xmlns="http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <OrderId>aed88250-7383-44c9-bfcc-1f6a45cdf2f5</OrderId>
+  <FinancialDetail>
+    <NonDeliveryAdjustmentSubtotal>0</NonDeliveryAdjustmentSubtotal>
+    <NonDeliveryDiscountAdjustmentSubtotal>0</NonDeliveryDiscountAdjustmentSubtotal>
+    <NonDeliveryDiscountSubtotal>0</NonDeliveryDiscountSubtotal>
+    <NonDeliverySubtotal>16.0000</NonDeliverySubtotal>
+    <NonDeliveryOneTimeChargeAdjustmentSubtotal>0</NonDeliveryOneTimeChargeAdjustmentSubtotal>
+    <NonDeliveryOneTimeChargeDiscountAdjustmentSubtotal>0</NonDeliveryOneTimeChargeDiscountAdjustmentSubtotal>
+    <NonDeliveryOneTimeChargeDiscountSubtotal>0</NonDeliveryOneTimeChargeDiscountSubtotal>
+    <NonDeliveryOneTimeChargeSubtotal>0.0000</NonDeliveryOneTimeChargeSubtotal>
+    <DeliveryAdjustmentSubtotal>0</DeliveryAdjustmentSubtotal>
+    <DeliveryDiscountAdjustmentSubtotal>0</DeliveryDiscountAdjustmentSubtotal>
+    <DeliveryDiscountSubtotal>0</DeliveryDiscountSubtotal>
+    <DeliverySubtotal>8.476482347386172006745362563</DeliverySubtotal>
+    <TaxAdjustmentSubtotal>0</TaxAdjustmentSubtotal>
+    <TaxSubtotal>1.6311553965935919055649241147</TaxSubtotal>
+    <AdjustmentSubtotal>0</AdjustmentSubtotal>
+    <DiscountSubtotal>0</DiscountSubtotal>
+    <Subtotal>24.476482347386172006745362563</Subtotal>
+    <Total>26.107637743979763912310286678</Total>
+  </FinancialDetail>
+  <LineItemDetails>
+    <LineItemQuoteDetail>
+      <LineItemId>db918750-a1eb-4a06-b906-60b644197dee</LineItemId>
+      <OfferingDetails>
+        <ItemOfferingDetailGroup>
+          <Group>BindingAndCovers</Group>
+          <Details>
+            <ItemOfferingDetail>
+              <OfferingId>dc9d8d74-6d0c-4a39-be6f-b43dde4e248e</OfferingId>
+              <OfferingName>Matte</OfferingName>
+              <OfferingTypeId>318d01f7-9d0f-44c9-a7a3-dcdc0935dd7d</OfferingTypeId>
+              <OfferingTypeName>PaperStock</OfferingTypeName>
+              <Quantity>1</Quantity>
+              <ListPrice>0</ListPrice>
+              <Price>0.6500</Price>
+              <ListOneTimeCharge>0</ListOneTimeCharge>
+              <OneTimeCharge>0.0000</OneTimeCharge>
+              <ProductionHoursRequired>0</ProductionHoursRequired>
+              <DiscountedAmount>0</DiscountedAmount>
+              <DiscountedOneTimeChargeAmount>0</DiscountedOneTimeChargeAmount>
+            </ItemOfferingDetail>
+            <ItemOfferingDetail>
+              <OfferingId>2303752c-b973-11d3-be26-0050da12a5a6</OfferingId>
+              <OfferingName>Black Vinyl</OfferingName>
+              <OfferingTypeId>318d01f7-9d0f-44c9-a7a3-dcdc0935dd7d</OfferingTypeId>
+              <OfferingTypeName>PaperStock</OfferingTypeName>
+              <Quantity>1</Quantity>
+              <ListPrice>0</ListPrice>
+              <Price>0.5000</Price>
+              <ListOneTimeCharge>0</ListOneTimeCharge>
+              <OneTimeCharge>0.0000</OneTimeCharge>
+              <ProductionHoursRequired>0</ProductionHoursRequired>
+              <DiscountedAmount>0</DiscountedAmount>
+              <DiscountedOneTimeChargeAmount>0</DiscountedOneTimeChargeAmount>
+            </ItemOfferingDetail>
+            <ItemOfferingDetail>
+              <OfferingId>2303753e-b973-11d3-be26-0050da12a5a6</OfferingId>
+              <OfferingName>Comb (Black)</OfferingName>
+              <OfferingTypeId>bd5d7c94-7263-4d54-b02f-236bb28fe736</OfferingTypeId>
+              <OfferingTypeName>Binding</OfferingTypeName>
+              <Quantity>1</Quantity>
+              <ListPrice>0</ListPrice>
+              <Price>3.5000</Price>
+              <ListOneTimeCharge>0</ListOneTimeCharge>
+              <OneTimeCharge>0.0000</OneTimeCharge>
+              <ProductionHoursRequired>0</ProductionHoursRequired>
+              <DiscountedAmount>0</DiscountedAmount>
+              <DiscountedOneTimeChargeAmount>0</DiscountedOneTimeChargeAmount>
+            </ItemOfferingDetail>
+          </Details>
+        </ItemOfferingDetailGroup>
+        <ItemOfferingDetailGroup>
+          <Group>PrintOptions</Group>
+          <Details>
+            <ItemOfferingDetail>
+              <OfferingId>a72287fc-6d2c-441e-8556-6ff5e6b0c5cb</OfferingId>
+              <OfferingName>White Paper (28 lb Premium)</OfferingName>
+              <OfferingTypeId>318d01f7-9d0f-44c9-a7a3-dcdc0935dd7d</OfferingTypeId>
+              <OfferingTypeName>PaperStock</OfferingTypeName>
+              <Quantity>6</Quantity>
+              <ListPrice>0</ListPrice>
+              <Price>0.0100</Price>
+              <ListOneTimeCharge>0</ListOneTimeCharge>
+              <OneTimeCharge>0.0000</OneTimeCharge>
+              <ProductionHoursRequired>0</ProductionHoursRequired>
+              <DiscountedAmount>0</DiscountedAmount>
+              <DiscountedOneTimeChargeAmount>0</DiscountedOneTimeChargeAmount>
+            </ItemOfferingDetail>
+            <ItemOfferingDetail>
+              <OfferingId>5934c916-eaa7-4717-9ecc-a19a6e10db95</OfferingId>
+              <OfferingName>Color Printing</OfferingName>
+              <OfferingTypeId>a8d73b9c-4fd4-4e3e-b0e8-a019bc533679</OfferingTypeId>
+              <OfferingTypeName>Printing</OfferingTypeName>
+              <Quantity>6</Quantity>
+              <ListPrice>0</ListPrice>
+              <Price>0.9900</Price>
+              <ListOneTimeCharge>0</ListOneTimeCharge>
+              <OneTimeCharge>0.0000</OneTimeCharge>
+              <ProductionHoursRequired>0</ProductionHoursRequired>
+              <DiscountedAmount>0</DiscountedAmount>
+              <DiscountedOneTimeChargeAmount>0</DiscountedOneTimeChargeAmount>
+            </ItemOfferingDetail>
+            <ItemOfferingDetail>
+              <OfferingId>203d2ff2-23e6-4061-9dbf-189fa971fc99</OfferingId>
+              <OfferingName>Print File Combination</OfferingName>
+              <OfferingTypeId>c8260c98-57b9-47b5-9ca3-cb25a5ebd5f2</OfferingTypeId>
+              <OfferingTypeName>Collation</OfferingTypeName>
+              <Quantity>1</Quantity>
+              <ListPrice>0</ListPrice>
+              <Price>0.3500</Price>
+              <ListOneTimeCharge>0</ListOneTimeCharge>
+              <OneTimeCharge>0.0000</OneTimeCharge>
+              <ProductionHoursRequired>0</ProductionHoursRequired>
+              <DiscountedAmount>0</DiscountedAmount>
+              <DiscountedOneTimeChargeAmount>0</DiscountedOneTimeChargeAmount>
+            </ItemOfferingDetail>
+          </Details>
+        </ItemOfferingDetailGroup>
+      </OfferingDetails>
+      <Price>11.0000</Price>
+      <OneTimeCharge>0.0000</OneTimeCharge>
+      <Discount>0</Discount>
+      <Adjustment>0</Adjustment>
+      <OneTimeChargeDiscount>0</OneTimeChargeDiscount>
+      <OneTimeChargeAdjustment>0</OneTimeChargeAdjustment>
+      <DiscountAdjustment>0</DiscountAdjustment>
+      <OneTimeChargeDiscountAdjustment>0</OneTimeChargeDiscountAdjustment>
+      <ReferenceData />
+      <Quantity>1</Quantity>
+    </LineItemQuoteDetail>
+  </LineItemDetails>
+  <RecipientDetails>
+    <RecipientQuoteDetail>
+      <RecipientId>937646be-ea51-424a-9cff-bdba68101afe</RecipientId>
+      <Tax>1.6311553965935919055649241147</Tax>
+      <ExpectedShipDate>2012-11-06T23:59:59Z</ExpectedShipDate>
+      <ExpectedDeliveryDate>2012-11-09T23:59:00</ExpectedDeliveryDate>
+      <DeliveryCharge>8.476482347386172006745362563</DeliveryCharge>
+      <EstimatedPackageCount>1</EstimatedPackageCount>
+      <ReferenceData />
+    </RecipientQuoteDetail>
+  </RecipientDetails>
+  <OfferingDetails>
+    <OrderOfferingQuoteDetail>
+      <OfferingId>cca32f91-68d0-43f8-b6d5-1659a60ccbe3</OfferingId>
+      <Price>5.0000</Price>
+      <OneTimeCharge>0.0000</OneTimeCharge>
+      <Discount>0</Discount>
+      <OneTimeChargeDiscount>0</OneTimeChargeDiscount>
+      <PricingLevel>Order</PricingLevel>
+      <Quantity>1</Quantity>
+      <OfferingTypeId>17d19d65-655f-4eee-b7e4-5214a81267f7</OfferingTypeId>
+    </OrderOfferingQuoteDetail>
+  </OfferingDetails>
+  <DiscountDetails />
+  <CutoffDate>2012-11-02T02:00:00Z</CutoffDate>
+  <EarliestPossibleShipDate>2012-11-03T04:59:59Z</EarliestPossibleShipDate>
+  <EarliestExpectedDeliveryDate>2012-11-03T00:00:00</EarliestExpectedDeliveryDate>
+  <TotalEstimatedPackageCount>1</TotalEstimatedPackageCount>
+</OrderQuote>
+-----------------------------------
+XML: OrderRequest-----------------------------------
+<OrderRequest xmlns="http://schemas.mimeo.com/EnterpriseServices/2008/09/OrderService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <LineItems>
+    <AddLineItemRequest>
+      <Name>Test</Name>
+      <StoreItemReference>
+        <Id>a4cfb527-8462-490f-a77a-44e45a53c9d8</Id>
+      </StoreItemReference>
+      <Quantity>1</Quantity>
+    </AddLineItemRequest>
+  </LineItems>
+  <Recipients>
+    <AddRecipientRequest>
+      <Address>
+        <FirstName>Will</FirstName>
+        <LastName>Smith</LastName>
+        <Street>460 Park Ave S.</Street>
+        <City>New York</City>
+        <StateOrProvince>NY</StateOrProvince>
+        <Country>US</Country>
+        <PostalCode>10016</PostalCode>
+        <TelephoneNumber>212-333-4444</TelephoneNumber>
+        <IsResidential>false</IsResidential>
+      </Address>
+      <ShippingMethodId>f2dc9f3d-ba8a-4a0c-831f-e240db9726db</ShippingMethodId>
+    </AddRecipientRequest>
+    <AddRecipientRequest xmlns="">
+      <Address>
+        <FirstName>Raul</FirstName>
+        <LastName>Moncada</LastName>
+        <Street>10226 Signal Hill RD</Street>
+        <City>Austin</City>
+        <StateOrProvince>TX</StateOrProvince>
+        <Country>US</Country>
+        <PostalCode>78737</PostalCode>
+        <TelephoneNumber>212-333-4444</TelephoneNumber>
+        <IsResidential>true</IsResidential>
+      </Address>
+      <ShippingMethodId>a5dbddce-7f92-4d45-bbfc-3111b47e79ce</ShippingMethodId>
+    </AddRecipientRequest>
+  </Recipients>
+  <SpecialInstructionCodes xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <a:string />
+  </SpecialInstructionCodes>
+  <PaymentMethod i:type="UserCreditLimitPaymentMethod">
+    <Id>524D8417-6E1D-466F-A0BE-627A4FA742DF</Id>
+  </PaymentMethod>
+  <Options>
+    <AdditionalProcessingHours>24</AdditionalProcessingHours>
+  </Options>
+  <PackagingSlip>
+    <SalutationType>None</SalutationType>
+    <Memo>Professor Smith</Memo>
+  </PackagingSlip>
+</OrderRequest>
+-----------------------------------

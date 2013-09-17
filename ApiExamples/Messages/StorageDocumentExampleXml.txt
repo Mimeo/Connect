@@ -1,0 +1,170 @@
+
+*****************************************************
+*****************************************************
+*********  UPLOAD REST XML TRACE ********************
+*****************************************************
+*****************************************************
+
+ENDPOINT: https://connect.sandbox.mimeo.com/2012/02/storageservice/BOM
+-----------------------------------
+<Folder xmlns="http://schemas.mimeo.com/MimeoConnect/2012/02/StorageService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <FolderId>cbac4aff-9d42-4488-b5f2-474aaac48465</FolderId>
+  <Name>BOM</Name>
+  <Created>2012-05-14T13:42:23.977Z</Created>
+  <Subfolders />
+  <Files>
+    <File>
+      <FileId>b1a8a3e1-1908-4682-9abb-6b25cbbd806c</FileId>
+      <Name>Ten Page</Name>
+      <DateCreated>2012-06-22T03:17:20.24Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-06-26T00:14:01.297Z</LastModified>
+      <LastUsed>2012-06-22T03:17:36.507Z</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>077a56bf-d86b-4b97-9d15-98bd8f85dd09</FileId>
+      <Name>tenpage.pdf</Name>
+      <DateCreated>2012-11-01T18:28:27.39Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-11-01T18:28:27.39Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>fc274a22-7c1a-4bda-a151-9839d28fba34</FileId>
+      <Name>tenpage.pdf (1)</Name>
+      <DateCreated>2012-11-01T18:36:43.26Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-11-01T18:36:43.26Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>4bc6e2f7-6214-4350-8b45-59f026964863</FileId>
+      <Name>tenpage.pdf (2)</Name>
+      <DateCreated>2012-11-01T18:38:30.497Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-11-01T18:38:30.497Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>1da826be-7e39-4cf7-afc3-6e21e9f7ff2a</FileId>
+      <Name>test 1.pdf</Name>
+      <DateCreated>2012-06-26T19:01:54.447Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-06-26T19:03:18.407Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>bc786ae2-1e14-46d0-a407-beb8d21e8c45</FileId>
+      <Name>Test Three.pdf</Name>
+      <DateCreated>2012-06-26T19:02:02.04Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-06-26T19:03:43.877Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>90d18a24-c7e7-4e4a-821d-ae542f1b50ec</FileId>
+      <Name>Test2.pdf</Name>
+      <DateCreated>2012-06-26T19:02:04.743Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-06-26T19:03:29.267Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+  </Files>
+</Folder>
+-----------------------------------
+ENDPOINT: DELETE -  https://connect.sandbox.mimeo.com/2012/02/storageservice/BOM/tenpage.pdf
+ENDPOINT: https://connect.sandbox.mimeo.com/2012/02/storageservice/BOM
+-----------------------------------
+<Folder xmlns="http://schemas.mimeo.com/MimeoConnect/2012/02/StorageService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <FolderId>cbac4aff-9d42-4488-b5f2-474aaac48465</FolderId>
+  <Name>BOM</Name>
+  <Created>2012-05-14T13:42:23.977Z</Created>
+  <Subfolders />
+  <Files>
+    <File>
+      <FileId>b1a8a3e1-1908-4682-9abb-6b25cbbd806c</FileId>
+      <Name>Ten Page</Name>
+      <DateCreated>2012-06-22T03:17:20.24Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-06-26T00:14:01.297Z</LastModified>
+      <LastUsed>2012-06-22T03:17:36.507Z</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>1da826be-7e39-4cf7-afc3-6e21e9f7ff2a</FileId>
+      <Name>test 1.pdf</Name>
+      <DateCreated>2012-06-26T19:01:54.447Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-06-26T19:03:18.407Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>bc786ae2-1e14-46d0-a407-beb8d21e8c45</FileId>
+      <Name>Test Three.pdf</Name>
+      <DateCreated>2012-06-26T19:02:02.04Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-06-26T19:03:43.877Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+    <File>
+      <FileId>90d18a24-c7e7-4e4a-821d-ae542f1b50ec</FileId>
+      <Name>Test2.pdf</Name>
+      <DateCreated>2012-06-26T19:02:04.743Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-06-26T19:03:29.267Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+  </Files>
+</Folder>
+-----------------------------------
+ENDPOINT: https://connect.sandbox.mimeo.com/2012/02/storageservice/BOM
+-----------------------------------
+<Folder xmlns="http://schemas.mimeo.com/MimeoConnect/2012/02/StorageService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <FolderId>cbac4aff-9d42-4488-b5f2-474aaac48465</FolderId>
+  <Name>BOM</Name>
+  <Created>2012-05-14T13:42:23.977Z</Created>
+  <Files>
+    <File>
+      <FileId>0e9a04b6-9728-475d-82ca-87b289c9652f</FileId>
+      <Name>tenpage.pdf</Name>
+      <DateCreated>2012-11-01T18:45:35.653Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-11-01T18:45:35.653Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+  </Files>
+</Folder>
+-----------------------------------
+-----------------------------------
+<Folder xmlns="http://schemas.mimeo.com/MimeoConnect/2012/02/StorageService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <FolderId>cbac4aff-9d42-4488-b5f2-474aaac48465</FolderId>
+  <Name>BOM</Name>
+  <Created>2012-05-14T13:42:23.977Z</Created>
+  <Files>
+    <File>
+      <FileId>0e9a04b6-9728-475d-82ca-87b289c9652f</FileId>
+      <Name>tenpage.pdf</Name>
+      <DateCreated>2012-11-01T18:45:35.653Z</DateCreated>
+      <IsBroken>false</IsBroken>
+      <LastModified>2012-11-01T18:45:35.653Z</LastModified>
+      <LastUsed>0001-01-01T00:00:00</LastUsed>
+      <PageCount>10</PageCount>
+    </File>
+  </Files>
+</Folder>
+-----------------------------------
+ENDPOINT: https://connect.sandbox.mimeo.com/2012/02/storageservice/Document/BOM Documents/
+ENDPOINT: https://connect.sandbox.mimeo.com/2012/02/storageservice/Document/GetDocument?DocumentId=
+
+

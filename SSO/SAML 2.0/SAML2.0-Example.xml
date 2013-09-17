@@ -1,0 +1,83 @@
+﻿<samlp:Response IssueInstant="2012-01-13T15:37:01.358Z" ID="doOlI8jnuKrY5rDHmmSIOqQm2Bx" Version="2.0" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol">
+	<saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">Mimeo:federation:saml2</saml:Issuer>
+	<samlp:Status>
+		<samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+	</samlp:Status>
+	<saml:Assertion Version="2.0" IssueInstant="2012-01-13T15:37:01.630Z" ID="S1gGugY4t9YRH8ISyHcTn6WPjtF" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+		<saml:Issuer>Mimeo:federation:saml2</saml:Issuer>
+		<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+			<ds:SignedInfo>
+				<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+				<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<ds:Reference URI="#S1gGugY4t9YRH8ISyHcTn6WPjtF">
+					<ds:Transforms>
+						<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					</ds:Transforms>
+					<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<ds:DigestValue>4C9d6uWz5hyGEsCvqTAs06q15Es=</ds:DigestValue>
+				</ds:Reference>
+			</ds:SignedInfo>
+			<ds:SignatureValue> TfgVsAM0tNwVf2ZbixGzxw2AyPCXvwi74Js0KUVFpFJItIeIDGJQHaP+q4xN7yyjkU9zdPRmuhrL Cz/Keo9dBEGdQbWq4SkdhsK9du4FzlwN3kKyFUWfXznrIaN2yPdVUBbyDTOwomBvuYsBQnrcG0kh zTGiwPcy01P7O4kBA88= </ds:SignatureValue>
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate> MIICQTCCAaqgAwIBAgIGARgtLN2DMA0GCSqGSIb3DQEBBQUAMGQxCzAJBgNVBAYTAlVTMQswCQYD VQQIEwJJTDEUMBIGA1UEBxMLZWFzdCBwZW9yaWExDDAKBgNVBAoTA3NwZDEMMAoGA1UECxMDc3Bk MRYwFAYDVQQDEw1uMWZlZHNpZ25jZXJ0MB4XDTA4MDIxODE1MzIzN1oXDTEzMDIxNjE1MzIzN1ow ZDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAklMMRQwEgYDVQQHEwtlYXN0IHBlb3JpYTEMMAoGA1UE ChMDc3BkMQwwCgYDVQQLEwNzcGQxFjAUBgNVBAMTDW4xZmVkc2lnbmNlcnQwgZ8wDQYJKoZIhvcN AQEBBQADgY0AMIGJAoGBAIIuHvtIcc+bHJeZBBCfBOFSO/UKHmgzQ2/fVhNXImemll2kZSt1wijP kJRaV/dqAcs4ZUtQ5Jc02dth4tgH6Y//95oscSc0ErXQ+9MkzxoK/ampMF4XqJ41iHxoD52DubrZ XFuk2OKmYXbJTkfUsWJJ0S7My/2IzV9TxRdB9PQbAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAImZT 1Dc1mOapYlIzqtU3zO8QKbMWBKCKQlFLCcXu+fv1b7kLiGQKJKhfC6EmDcURT7tTjgsFSfl2Vb8f Tm0DgC3ORcq9xSqzME3Vei80oKKEF5RkulYRe79oScatTBY9T8N01+1BsMmvn+QglAn4x1nLQRMb rpIE2a6CXi3S0qQ= </ds:X509Certificate>
+				</ds:X509Data>
+				<ds:KeyValue>
+					<ds:RSAKeyValue>
+						<ds:Modulus> gi4e+0hxz5scl5kEEJ8E4VI79QoeaDNDb99WE1ciZ6aWXaRlK3XCKM+QlFpX92oByzhlS1DklzTZ 22Hi2Afpj//3mixxJzQStdD70yTPGgr9qakwXheonjWIfGgPnYO5utlcW6TY4qZhdslOR9SxYknR LszL/YjNX1PFF0H09Bs= </ds:Modulus>
+						<ds:Exponent>AQAB</ds:Exponent>
+					</ds:RSAKeyValue>
+				</ds:KeyValue>
+			</ds:KeyInfo>
+		</ds:Signature>
+		<saml:Subject>
+			<saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified">catrecid=PPS-000A0E3A,OU=People,dc=cat,dc=com</saml:NameID>
+			<saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+				<saml:SubjectConfirmationData NotOnOrAfter="2012-01-13T15:42:01.630Z" Recipient="https://my.mimeo.com/sso/authenticate.ashx"/>
+			</saml:SubjectConfirmation>
+		</saml:Subject>
+		<saml:Conditions NotOnOrAfter="2012-01-13T15:42:01.630Z" NotBefore="2012-01-13T15:32:01.630Z">
+			<saml:AudienceRestriction>
+				<saml:Audience>Mimeo-Salepublications</saml:Audience>
+			</saml:AudienceRestriction>
+		</saml:Conditions>
+		<saml:AuthnStatement AuthnInstant="2012-01-13T15:37:01.630Z" SessionIndex="S1gGugY4t9YRH8ISyHcTn6WPjtF">
+			<saml:AuthnContext>
+				<saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified</saml:AuthnContextClassRef>
+			</saml:AuthnContext>
+		</saml:AuthnStatement>
+		<saml:AttributeStatement xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="lastName">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Smith</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="errorUrl">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://google.com</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="organizationId">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">{5EDF3381-6EEA-40C9-8A1A-01C672B2B1C9}</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="companyName">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Mimeo Inc.</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="authorizedMarketPlaceUrl">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Sales,Developers</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="email">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">jsmith@mimeo.com</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="initialCredit">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">300.00</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="companyId">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">{79C3920B-CC06-4A96-9540-C4C45F172998}</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="firstName">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">John</saml:AttributeValue>
+			</saml:Attribute>
+			<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="redirectUrl">
+				<saml:AttributeValue xsi:type="xs:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">https://marketplace.mimeo.com/Sales</saml:AttributeValue>
+			</saml:Attribute>
+		</saml:AttributeStatement>
+	</saml:Assertion>
+</samlp:Response>
