@@ -61,12 +61,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DocumentUpdate.aspx" />
     <Content Include="GetLibrary.aspx" />
     <Content Include="GetLocalDate.aspx" />
     <Content Include="Web.config" />
     <Content Include="GetQuote.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentUpdate.aspx.cs">
+      <DependentUpon>DocumentUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentUpdate.aspx.designer.cs">
+      <DependentUpon>DocumentUpdate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GetLibrary.aspx.cs">
       <DependentUpon>GetLibrary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

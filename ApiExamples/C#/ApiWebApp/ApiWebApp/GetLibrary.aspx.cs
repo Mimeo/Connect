@@ -29,6 +29,8 @@ namespace ApiWebApp
 
 		}
 
+		#region Actions
+
         protected void btnGetDocuments_Click(object sender, EventArgs e)
         {
             this.txtOutput.Text = string.Empty;
@@ -57,10 +59,10 @@ namespace ApiWebApp
         {
             this.txtOutput.Text = string.Empty;
 
-            string xmlRequest = 
+            string xmlRequest =
             "<StoreItemSearchCriteria xmlns=\"http://schemas.mimeo.com/EnterpriseServices/2008/09/StorageService\">" +
             "<PageInfo xmlns=\"http://schemas.mimeo.com/EnterpriseServices/2008/09/Common/Search\"><PageSize>10</PageSize><PageNumber>" + this.txtstoreItemPage.Text + "</PageNumber></PageInfo>" +
-            "<FolderId>" + this.txtStoreItemFolder.Text +"</FolderId>" +
+            "<FolderId>" + this.txtStoreItemFolder.Text + "</FolderId>" +
             "<Type>Document</Type>" +
             "</StoreItemSearchCriteria>";
 
@@ -69,10 +71,8 @@ namespace ApiWebApp
 
             XmlDocument apiResult = mimeoApi.FindStoreItems(doc);
 
-            this.txtOutput.Text = XElement.Parse(apiResult.InnerXml).ToString(); 
+            this.txtOutput.Text = XElement.Parse(apiResult.InnerXml).ToString();
         }
-
-		#region Actions
 
 		#endregion
 

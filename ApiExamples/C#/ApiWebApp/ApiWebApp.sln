@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiWebApp", "ApiWebApp\ApiWebApp.csproj", "{FA532C70-E3E8-4214-A8B8-E87D4BF432A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeoRestLib", "..\..\..\tfs\Development Sandbox\Raul Moncada\MimeoRestLib\MimeoRestLib.csproj", "{5675EA8D-20E7-48E1-A50A-8A4DB86F144E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeoRestLib", "..\MimeoRestLib\MimeoRestLib.csproj", "{5675EA8D-20E7-48E1-A50A-8A4DB86F144E}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -14,9 +14,9 @@ Global
 		SccProjectUniqueName1 = ApiWebApp\\ApiWebApp.csproj
 		SccProjectName1 = ApiWebApp
 		SccLocalPath1 = ApiWebApp
-		SccProjectUniqueName2 = ..\\..\\..\\tfs\\Development\u0020Sandbox\\Raul\u0020Moncada\\MimeoRestLib\\MimeoRestLib.csproj
+		SccProjectUniqueName2 = ..\\MimeoRestLib\\MimeoRestLib.csproj
 		SccProjectName2 = ../MimeoRestLib
-		SccLocalPath2 = ..\\..\\..\\tfs\\Development\u0020Sandbox\\Raul\u0020Moncada\\MimeoRestLib
+		SccLocalPath2 = ..\\MimeoRestLib
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

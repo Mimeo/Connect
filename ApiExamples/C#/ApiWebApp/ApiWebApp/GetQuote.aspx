@@ -38,8 +38,8 @@
 				<asp:TableCell VerticalAlign="Top">
 					<p>
 					<asp:Label ID="Label11" runat="server" Text="Login User/Password:"></asp:Label>
-					<asp:TextBox ID="txtUser" runat="server" Height="24px" Width="150px">user@mimeo.com</asp:TextBox>&nbsp;/&nbsp;
-					<asp:TextBox ID="txtPassword" runat="server" Height="24px" Width="100px">password</asp:TextBox>
+					<asp:TextBox ID="txtUser" runat="server" Height="24px" Width="150px">jmoncada@mimeo.com</asp:TextBox>&nbsp;/&nbsp;
+					<asp:TextBox ID="txtPassword" runat="server" Height="24px" Width="100px">testing!</asp:TextBox>
 					
 					</p>
                         <div id="rblDiv ">

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" CodeBehind="GetLibrary.aspx.cs" Inherits="ApiWebApp.WebForm3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" CodeBehind="DocumentUpdate.aspx.cs" Inherits="ApiWebApp.WebForm4" %>
 
 <!DOCTYPE html>
 
@@ -53,23 +53,26 @@
         <p>
             <asp:Label ID="Label1" runat="server" Text="Folder:"></asp:Label>
             <asp:TextBox ID="txtDocumentFolder" runat="server" Height="24px" Width="150px"></asp:TextBox>&nbsp;
-            <asp:Button ID="btnGetDocuments" runat="server" Text="GetDocuments" OnClick="btnGetDocuments_Click" />
-        </p>
-
-          <p>
-            <asp:Label ID="Label2" runat="server" Text="Folder:"></asp:Label>
-            <asp:TextBox ID="txtFileFolder" runat="server" Height="24px" Width="150px"></asp:TextBox>&nbsp;
-            <asp:Button ID="bntGetFiles" runat="server" Text="GetFiles" OnClick="btnGetFiles_Click" Width="131px" />
+            <asp:Label ID="Label2" runat="server" Text="File:"></asp:Label>
+            <asp:TextBox ID="txtFile" runat="server" Height="24px" Width="150px"></asp:TextBox>
         </p>
 
         <p>
-            <asp:Label ID="Label3" runat="server" Text="Folder Id:"></asp:Label>
-            <asp:TextBox ID="txtStoreItemFolder" runat="server" Height="24px" Width="150px"></asp:TextBox>&nbsp;
-            <asp:Label ID="Label4" runat="server" Text="Page:"></asp:Label>
-            <asp:TextBox ID="txtstoreItemPage" runat="server" Height="24px" Width="150px"></asp:TextBox>&nbsp;
-            <asp:Button ID="FindStoreItemFolder" runat="server" Text="FindStoreItem" OnClick="btnFindStoreItem_Click" Width="131px" />
+            <asp:Button ID="btnRemovePrintFile" runat="server" Text="Remove Print File" OnClick="btnRemovePrintFile_Click" />&nbsp;&nbsp;
+            <asp:Button ID="btnRemoveDocument" runat="server" Text="Remove Document" OnClick="btnRemoveDocument_Click" Width="131px" />
         </p>
 
+         <p>
+             Document Id:<asp:TextBox ID="txtUpdateDocumentId" runat="server" Height="24px" Width="150px"></asp:TextBox>&nbsp;
+             File Id:<asp:TextBox ID="txtUpdateFileId" runat="server" Height="24px" Width="150px"></asp:TextBox>&nbsp;
+             Template Id:<asp:TextBox ID="txtUpdateTemplateId" runat="server" Height="24px" Width="150px"></asp:TextBox> &nbsp;&nbsp;
+           </p>
+        <p>
+            
+              <asp:Button ID="btnGetDocument" runat="server" Text="Get Document" OnClick="btnGetDocument_Click" />
+              <asp:Button ID="btnUpdateDocument" runat="server" Text="Update Document" OnClick="btnUpdateDocument_Click" />
+
+        </p>
         <p>
             <asp:TextBox ID="txtOutput" runat="server" Height="800px" Width="800px" TextMode="MultiLine" Style="margin-top: 0px"></asp:TextBox>
         </p>
