@@ -72,6 +72,8 @@
               <asp:Button ID="btnGetDocument" runat="server" Text="Get Document" OnClick="btnGetDocument_Click" />
               <asp:Button ID="btnUpdateDocument" runat="server" Text="Update Document" OnClick="btnUpdateDocument_Click" />
 
+              <asp:Button ID="btnCreateDocument" runat="server" Text="Create Document" OnClick="btnCreateDocument_Click" />
+
         </p>
         <p>
             <asp:TextBox ID="txtOutput" runat="server" Height="800px" Width="800px" TextMode="MultiLine" Style="margin-top: 0px"></asp:TextBox>

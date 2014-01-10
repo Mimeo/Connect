@@ -104,6 +104,28 @@ namespace ApiWebApp
             this.txtOutput.Text = apiResult.ToString();
         }
 
+        protected void btnCreateDocument_Click(object sender, EventArgs e)
+        {
+            this.txtOutput.Text = string.Empty;
+
+            string DocumentId = (String.IsNullOrEmpty(this.txtUpdateDocumentId.Text))
+                ? ""
+                : this.txtUpdateDocumentId.Text;
+
+            string fileId = (String.IsNullOrEmpty(this.txtUpdateFileId.Text))
+                ? ""
+                : this.txtUpdateFileId.Text;
+
+            string templateId = (String.IsNullOrEmpty(this.txtUpdateTemplateId.Text))
+                ? ""
+                : this.txtUpdateTemplateId.Text;
+
+
+            XDocument apiResult = mimeoApi.updateDocument(DocumentId, fileId, templateId);
+
+            this.txtOutput.Text = apiResult.ToString();
+        }
+
 
 
 		#region Workers
