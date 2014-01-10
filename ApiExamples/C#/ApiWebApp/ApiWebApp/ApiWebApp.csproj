@@ -61,6 +61,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GetOrderInfo.aspx" />
     <Content Include="DocumentUpdate.aspx" />
     <Content Include="GetLibrary.aspx" />
     <Content Include="GetLocalDate.aspx" />
@@ -68,6 +69,13 @@
     <Content Include="GetQuote.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetOrderInfo.aspx.cs">
+      <DependentUpon>GetOrderInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetOrderInfo.aspx.designer.cs">
+      <DependentUpon>GetOrderInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DocumentUpdate.aspx.cs">
       <DependentUpon>DocumentUpdate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
