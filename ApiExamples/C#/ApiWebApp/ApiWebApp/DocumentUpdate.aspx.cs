@@ -88,9 +88,6 @@ namespace ApiWebApp
             this.txtOutput.Text = apiResult.ToString();
         }
 
-
-		#endregion
-
         protected void btnGetDocument_Click(object sender, EventArgs e)
         {
             this.txtOutput.Text = string.Empty;
@@ -121,10 +118,30 @@ namespace ApiWebApp
                 : this.txtUpdateTemplateId.Text;
 
 
-            XDocument apiResult = mimeoApi.updateDocument(DocumentId, fileId, templateId);
+            XDocument apiResult = mimeoApi.createDocument("Test", "BOM Documents", fileId, templateId);
 
             this.txtOutput.Text = apiResult.ToString();
         }
+
+        protected void btnUploadPrintFile_Click(object sender, EventArgs e)
+        {
+            this.txtOutput.Text = string.Empty;
+
+            string folder = (String.IsNullOrEmpty(this.txtDocumentFolder.Text))
+                ? ""
+                : this.txtDocumentFolder.Text;
+
+            string file = (String.IsNullOrEmpty(this.txtFile.Text))
+                ? ""
+                : this.txtFile.Text;
+
+            XDocument apiResult = mimeoApi.UploadPDF(folder, file);
+
+            this.txtOutput.Text = apiResult.ToString();
+        }
+
+		#endregion
+
 
 
 

@@ -33,7 +33,6 @@ namespace ApiWebApp
 		{
 			this.txtOutput.Text = string.Empty;
 
-			//XDocument docXml = DoUploadDocument();
 			XDocument docXml = new XDocument();
 
 			String orderFriendlyId = OrderDocument(docXml, false);
@@ -72,7 +71,6 @@ namespace ApiWebApp
 		{
 			this.txtOutput.Text = string.Empty;
 
-			//XDocument docXml = DoUploadDocument();
 			XDocument docXml = new XDocument();
 
 			String orderFriendlyId = OrderDocument(docXml, true);

@@ -54,10 +54,12 @@
             <asp:Label ID="Label1" runat="server" Text="Folder:"></asp:Label>
             <asp:TextBox ID="txtDocumentFolder" runat="server" Height="24px" Width="150px"></asp:TextBox>&nbsp;
             <asp:Label ID="Label2" runat="server" Text="File:"></asp:Label>
-            <asp:TextBox ID="txtFile" runat="server" Height="24px" Width="150px"></asp:TextBox>
+            <asp:TextBox ID="txtFile" runat="server" Height="24px" Width="150px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <asp:Label ID="Label3" runat="server" Text="(Use:  file path for upload, file name for remove)"></asp:Label>
         </p>
 
-        <p>
+        <p> <asp:Button ID="btnUploadPDF" runat="server" Text="Upload Print File" OnClick="btnUploadPrintFile_Click" />&nbsp;&nbsp;
             <asp:Button ID="btnRemovePrintFile" runat="server" Text="Remove Print File" OnClick="btnRemovePrintFile_Click" />&nbsp;&nbsp;
             <asp:Button ID="btnRemoveDocument" runat="server" Text="Remove Document" OnClick="btnRemoveDocument_Click" Width="131px" />
         </p>
