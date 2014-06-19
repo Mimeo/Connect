@@ -39,14 +39,15 @@ class RestClient {
          }
          if($this->method === "POST") {
              curl_setopt($this->curl,CURLOPT_POST,true);
-             if(is_array($this->params)) {
+            /* if(is_array($this->params)) {
                  $params = "";
                  foreach($this->params as $k=>$v) {
                      $params .= "$k=$v&";
                  }
              } else {
                  $params = $this->params ;
-             }
+             }*/
+			 $params = $this->params ;
              curl_setopt($this->curl,CURLOPT_POSTFIELDS,$params);
          } else if($this->method == "GET"){
              curl_setopt($this->curl,CURLOPT_HTTPGET,true);
@@ -64,6 +65,7 @@ class RestClient {
          }
          curl_setopt($this->curl,CURLOPT_URL,$this->url);
          $r = curl_exec($this->curl);
+		 
          $this->treatResponse($r); // Extract the headers and response
          return $this ;
      }
