@@ -216,6 +216,26 @@ namespace Connect.ClientLib
             }
         }
 
+        async public Task<Guid> UploadXmlPDF(string foldername, string filename, byte[] byteData)
+        {
+            using (var client = newClient(true))
+            {
+                using (var content = new MultipartFormDataContent())
+                {
+                    Stream stream = new MemoryStream(byteData);
+                    content.Add(CreateFileContent(stream, filename, "application/octet-stream"));
+                    string endpointUri = string.Format("StorageService/{0}", foldername);
+                    var httpResponse = await client.PostAsync(endpointUri, content);
+                    var fileXml = await this.ReadXmlAsync(httpResponse);
+                    String fileId = (from file in fileXml.Descendants(NameSpaces.ns + "File")
+                                     select file.Element(NameSpaces.ns + "FileId").Value).FirstOrDefault();
+
+                    return Guid.Parse(fileId);
+                }
+            }
+        }
+
+
 
         #endregion
 

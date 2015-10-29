@@ -2,6 +2,7 @@
 using Connect.ClientLib.Helpers;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,13 +14,17 @@ namespace SampleClient
         static void Main(string[] args)
         {
 
-            var client = new ConnectClientLib("jmoncada@mimeo.com", "testing!"); 
+            var client = new ConnectClientLib("jmoncada@mimeo.com", "testing!");
 
-            // Get shipping options example
-            callGetShippingOptions(client);
+            client.SetBaseEndPoint(ServiceURI.SandboxUS2014); 
+            Guid fileId = upload(client, "test-10.28.2015", "five-page.pdf", File.ReadAllBytes(@"c:\play\five-page.pdf"));
+            Guid docId = createDocument(client, "3930ea12-6675-43ad-8b1c-94c4177cc980", fileId, 5, "Test10.28.2015", "testing", "Test2015");
 
-            // Place Order example
-            doPlaceOrder(client) ;
+            // Get Quote
+            placeOrder(client, docId.ToString(), true);
+
+            // Place Order
+            placeOrder(client, docId.ToString(), false);
 
         }
 
@@ -38,6 +43,43 @@ namespace SampleClient
         }
 
         #region Helper
+
+        static Guid upload(ConnectClientLib client, string folderName, string fileName, byte[] fileBytes)
+        {
+            Guid newFileId = client.UploadXmlPDF(folderName, fileName, fileBytes).Result;
+            return newFileId;
+
+        }
+
+
+        static Guid createDocument(ConnectClientLib client, string templateId, Guid fileId, int filePages, string docName, string docDescription, string folder)
+        {
+
+            string tURI = string.Format("StorageService/NewDocument?DocumentTemplateId={0}", templateId);
+            var jsonReq = client.GetJsonRequest(tURI).Result;
+
+            var req = client.ConvertToObject<NewDocument>(jsonReq);
+
+            req.Name = docName;
+            req.Description = docDescription;
+            req.ReferenceData = "Testing";
+            req.Product.Content[0].Range = string.Format("[{0},{1}]", 1, filePages);
+            req.Product.Content[0].Source = fileId.ToString();
+            req.Product.Quantity = 1;
+            req.Product.ApplicationId = "00000000-0000-0000-0000-000000000000";
+
+
+            client.SetBaseEndPoint(ServiceURI.SandboxUS);  // Set to 2012 API, bug reported with 2014 API
+            string uploadURI = string.Format("StorageService/Document/{0}", folder);
+            var createdDoc = client.PostRequest(uploadURI, req).Result;
+
+            string fcDocumentId = (from file in createdDoc.Descendants(NameSpaces.ns + "DocumentFile")
+                                   select file.Element(NameSpaces.ns + "FileId").Value).FirstOrDefault();
+
+
+            client.SetBaseEndPoint(ServiceURI.SandboxUS2014); // Set to 2014 API
+            return Guid.Parse(fcDocumentId);
+        }
 
         static void getShippingOptions(ConnectClientLib client, string DocId)
         {
