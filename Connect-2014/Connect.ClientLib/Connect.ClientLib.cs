@@ -115,6 +115,7 @@ namespace Connect.ClientLib
             EnsureArgument.NotNull(responseFactory, "responseFactory");
 
             ServicePointManager.ServerCertificateValidationCallback += ValidateRemoteCertificate;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
 
             this.authInformation = this.BuildAuthenticationToken(user, password);
 
@@ -200,6 +201,18 @@ namespace Connect.ClientLib
             var xml = await this.ReadXmlAsync(httpResponse);
 
             return xml;
+        }
+
+        public async Task<JArray> PostasXmlRequest<T>(String requestName, T request)
+        {
+            EnsureArgument.NotNull(requestName, "requestName");
+            EnsureArgument.NotNull(request, "request");
+
+            //Should validate before we send ...           
+            var httpResponse = await this.PostJsonAsync(requestName, request);
+            var json = await this.ReadJsonArrayAsync(httpResponse);
+
+            return json;
         }
 
         async public Task<HttpResponseMessage> UploadPDF(string foldername, string filename, byte[] byteData)
@@ -301,6 +314,11 @@ namespace Connect.ClientLib
         protected Task<JObject> ReadJsonAsync(HttpResponseMessage response)
         {
             return response.Content.ReadAsAsync<JObject>();
+        }
+
+        protected Task<JArray> ReadJsonArrayAsync(HttpResponseMessage response)
+        {
+            return response.Content.ReadAsAsync<JArray>();
         }
 
         protected Task<XDocument> ReadXmlAsync(HttpResponseMessage response)

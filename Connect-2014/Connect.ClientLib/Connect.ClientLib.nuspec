@@ -1,0 +1,15 @@
+﻿<package>
+  <metadata>
+    <id>Mimeo.ConnectClientLib.Deployment</id>
+    <version>$version$</version>
+    <authors>jmoncada</authors>
+    <owners>jmoncada</owners>
+    <licenseUrl>http://www.mimeo.com</licenseUrl>
+    <projectUrl>http://www.mimeo.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Connect Client deployment package</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+  </files>
+</package>
